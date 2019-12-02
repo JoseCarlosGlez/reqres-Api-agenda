@@ -1,0 +1,27 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login {
+    height: 80vh;
+    width: 70%;
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+}
+
+input {
+    width: 100% !important;
+}
+
+.form {
+    width: 50%;
+}
+
+.btn {
+    width: 50%;
+}

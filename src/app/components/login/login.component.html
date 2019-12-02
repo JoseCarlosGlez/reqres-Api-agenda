@@ -1,0 +1,71 @@
+<div class="container contenedor bg-light">
+
+
+
+    <div class="login jumbotron">
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="../../../assets/img/user.png" alt="..." class="img-thumbnail rounded-circle">
+            </div>
+        </div>
+
+
+
+        <ng-container [formGroup]="Formulario">
+
+            <div class="row mt-4 text-center">
+                <div class="col-12 ">
+
+                    <mat-form-field class="example-full-width form">
+                        <input matInput placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="Formulario.get('email').errors">{{getErrorMessageEmail()}}</mat-error>
+                    </mat-form-field>
+
+
+                </div>
+
+                <div class="col-12 mt-2">
+                    <mat-form-field class="example-full-width form">
+                        <input matInput placeholder="Password" type="password" formControlName="password">
+
+                        <mat-error *ngIf="Formulario.get('password').errors">{{getErrorMessagePassword()}}</mat-error>
+
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row text-center mt-4 ">
+                <div class="col-12 ">
+                    <button type="button" (click)="sendForm()" [disabled]="Formulario.invalid" class="btn btn-outline-dark btn-lg">Login</button>
+                </div>
+            </div>
+
+
+
+
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <a class="stretched-link text-primary ">Registrarse</a>
+
+                </div>
+            </div>
+
+        </ng-container>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
